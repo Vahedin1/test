@@ -41,3 +41,4 @@ C:\Users\PC\Documents\ITA Microsoft Development\8. Web App Development - ASP.NET
 C:\Users\PC\Documents\ITA Microsoft Development\8. Web App Development - ASP.NET Core MVC\Assaignments\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.pdb
 C:\Users\PC\Documents\ITA Microsoft Development\8. Web App Development - ASP.NET Core MVC\Assaignments\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
 C:\Users\PC\Documents\ITA Microsoft Development\8. Web App Development - ASP.NET Core MVC\Assaignments\WebApplication1\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll
+C:\Users\PC\Documents\ITA Microsoft Development\8. Web App Development - ASP.NET Core MVC\Assaignments\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.sourcelink.json

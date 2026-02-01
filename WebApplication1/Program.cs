@@ -5,9 +5,11 @@ using System.Globalization;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 builder.Services.AddControllersWithViews()
     .AddViewLocalization()
     .AddDataAnnotationsLocalization();
+
 
 builder.Services.AddSession(options =>
 {
@@ -27,7 +29,7 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
         new CultureInfo("de")
     };
 
-    options.DefaultRequestCulture = new RequestCulture("sr");
+    options.DefaultRequestCulture = new RequestCulture("en");
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
 });

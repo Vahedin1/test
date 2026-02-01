@@ -1,0 +1,17 @@
+﻿# Ignore Visual Studio cache
+.vs/
+*.vsidx
+*.suo
+*.user
+
+# Build output
+bin/
+obj/
+Debug/
+Release/
+
+# Other temp files
+*.log
+*.tmp
+*.cache
+*.bak

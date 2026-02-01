@@ -19,7 +19,7 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public IActionResult SetLanguage(string culture, string returnUrl = null)
+        public IActionResult SetLanguage(string culture, string returnUrl)
         {
             Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,
@@ -27,7 +27,7 @@ namespace WebApplication1.Controllers
                 new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
             );
 
-            return LocalRedirect(returnUrl ?? "/");
+            return LocalRedirect(returnUrl);
         }
         public IActionResult Privacy()
         {

@@ -39,14 +39,21 @@
                     </li>
                 </ul>
             </div>
+
             <div class="dropdown me-3">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
                     @Localizer["Language"]
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/Home/SetLanguage?culture=sr&returnUrl=@Context.Request.Path">Srpski</a></li>
-                    <li><a class="dropdown-item" href="/Home/SetLanguage?culture=en&returnUrl=@Context.Request.Path">English</a></li>
-                    <li><a class="dropdown-item" href="/Home/SetLanguage?culture=de&returnUrl=@Context.Request.Path">Deustch</a></li>
+                    <li>
+                        <a class="dropdown-item" asp-controller="Home" asp-action="SetLanguage" asp-route-culture="sr" asp-route-returnUrl="@Context.Request.Path">Srpski</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" asp-controller="Home" asp-action="SetLanguage" asp-route-culture="en" asp-route-returnUrl="@Context.Request.Path">English</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" asp-controller="Home" asp-action="SetLanguage" asp-route-culture="de" asp-route-returnUrl="@Context.Request.Path">Deutsch</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -58,7 +65,8 @@
 
     <footer>
         <div class="container">
-            &copy; 2026 - Auto Oglasi Hamidovic - <a asp-area="" asp-controller="Home" asp-action="Privacy">@Localizer["Privacy"]</a>
+            &copy; 2026 - Auto Oglasi Hamidovic -
+            <a asp-area="" asp-controller="Home" asp-action="Privacy">@Localizer["Privacy"]</a>
         </div>
     </footer>
 

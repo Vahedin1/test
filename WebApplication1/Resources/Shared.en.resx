@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+	</resheader>
+
+	<!-- Header -->
+	<data name="Home" xml:space="preserve"><value>Home</value></data>
+	<data name="About" xml:space="preserve"><value>About us</value></data>
+	<data name="Contact" xml:space="preserve"><value>Contact</value></data>
+	<data name="Ads" xml:space="preserve"><value>Ads</value></data>
+	<data name="AddCar" xml:space="preserve"><value>Add car</value></data>
+	<data name="Admin" xml:space="preserve"><value>Admin</value></data>
+	<data name="Language" xml:space="preserve"><value>Language</value></data>
+	<data name="Privacy" xml:space="preserve"><value>Privacy</value></data>
+
+	<!-- Login -->
+	<data name="Login" xml:space="preserve"><value>Login</value></data>
+	<data name="Logout" xml:space="preserve"><value>Logout</value></data>
+	<data name="Username" xml:space="preserve"><value>Username</value></data>
+	<data name="Password" xml:space="preserve"><value>Password</value></data>
+	<data name="LoggedInAs" xml:space="preserve"><value>Logged in as</value></data>
+	<data name="Error" xml:space="preserve"><value>Error</value></data>
+
+	<!-- Create / Automobil -->
+	<data name="Brand" xml:space="preserve"><value>Brand</value></data>
+	<data name="Model" xml:space="preserve"><value>Model</value></data>
+	<data name="Year" xml:space="preserve"><value>Year</value></data>
+	<data name="EngineCapacity" xml:space="preserve"><value>Engine capacity</value></data>
+	<data name="Power" xml:space="preserve"><value>Power</value></data>
+	<data name="Fuel" xml:space="preserve"><value>Fuel</value></data>
+	<data name="Body" xml:space="preserve"><value>Body</value></data>
+	<data name="Description" xml:space="preserve"><value>Description</value></data>
+	<data name="Price" xml:space="preserve"><value>Price</value></data>
+	<data name="ContactInfo" xml:space="preserve"><value>For more info write to: kontakt@autoprodaja.rs</value></data>
+	<data name="Add" xml:space="preserve"><value>Add</value></data>
+
+	<!-- Details -->
+	<data name="CarDetails" xml:space="preserve"><value>Car details</value></data>
+	<data name="Details" xml:space="preserve"><value>Details</value></data>
+	<data name="Delete" xml:space="preserve"><value>Delete</value></data>
+	<data name="Action" xml:space="preserve"><value>Action</value></data>
+
+	<!-- About -->
+	<data name="NoCarsAvailable" xml:space="preserve"><value>Keine Autos verfügbar</value></data>
+	<data name="About" xml:space="preserve"><value>About us</value></data>
+	<data name="AboutIntro" xml:space="preserve"><value>Auto Oglasi Hamidović is a modern platform for car sales across Serbia and the region.</value></data>
+	<data name="Mission" xml:space="preserve"><value>Our mission</value></data>
+	<data name="MissionText" xml:space="preserve"><value>Connecting buyers and sellers in a fast, simple, and secure way.</value></data>
+
+
+	<!-- Contact -->
+	<data name="Address" xml:space="preserve"><value>Address</value></data>
+	<data name="Phones" xml:space="preserve"><value>Phones</value></data>
+
+	<!-- Home -->
+	<data name="Welcome" xml:space="preserve"><value>Welcome to the car sales site</value></data>
+	<data name="WelcomeText" xml:space="preserve"><value>On our site you can browse ads and add your car.</value></data>
+	<data name="AdsOverview" xml:space="preserve"><value>Ads overview</value></data>
+	<data name="AvailableAds" xml:space="preserve"><value>Currently available ads:</value></data>
+	<data name="ViewAllAds" xml:space="preserve"><value>View all ads</value></data>
+
+	<!-- Privacy -->
+	<data name="PrivacyText" xml:space="preserve"><value>This page shows the site's privacy policy.</value></data>
+</root>

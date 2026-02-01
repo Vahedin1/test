@@ -1,0 +1,19 @@
+﻿@inject Microsoft.Extensions.Localization.IStringLocalizer<WebApplication1.SharedResource> Localizer
+
+@{
+    ViewData["Title"] = Localizer["Home"];
+}
+
+<h2>@Localizer["Welcome"]</h2>
+<p>@Localizer["WelcomeText"]</p>
+
+<hr />
+<h4>@Localizer["AdsOverview"]</h4>
+<p>@Localizer["AvailableAds"]</p>
+
+<ul>
+    <li>Audi A4, 2018, 2.0 Dizel – Cena: 15,500 €</li>
+    <li>Volkswagen Golf 7, 2016, 1.6 Dizel – Cena: 11,900 €</li>
+</ul>
+
+<p><a class="btn btn-primary" asp-controller="Automobili" asp-action="Index">@Localizer["ViewAllAds"]</a></p>

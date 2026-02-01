@@ -1,0 +1,33 @@
+﻿@using WebApplication1.Controllers
+@inject Microsoft.Extensions.Localization.IStringLocalizer<WebApplication1.SharedResource> Localizer
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Localizer["Brand"]</th>
+            <th>@Localizer["Model"]</th>
+            <th>@Localizer["Price"]</th>
+            <th>@Localizer["Details"]</th>
+            @if (AdminController.IsAdmin(Context))
+            {
+                <th>@Localizer["Action"]</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var auto in Model)
+        {
+            <tr>
+                <td>@auto.Marka</td>
+                <td>@auto.Model</td>
+                <td>@auto.Cena €</td>
+                <td><a asp-action="Details" asp-route-id="@auto.Id">@Localizer["Details"]</a></td>
+                @if (AdminController.IsAdmin(Context))
+                {
+                    <td><a asp-action="Delete" asp-route-id="@auto.Id" class="btn btn-danger">@Localizer["Delete"]</a></td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

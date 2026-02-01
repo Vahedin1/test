@@ -1,0 +1,17 @@
+﻿@inject Microsoft.Extensions.Localization.IStringLocalizer<WebApplication1.SharedResource> Localizer
+
+@{
+    ViewData["Title"] = Localizer["Contact"];
+}
+
+<h2>@Localizer["Contact"]</h2>
+<p>@Localizer["ContactInfo"]</p>
+
+<hr />
+<h4>@Localizer["Address"]</h4>
+<p>Auto Oglasi Hamidović<br />Ulica Kralja Petra 12<br />36310 Beograd, Srbija</p>
+
+<h4>@Localizer["Phones"]</h4>
+<ul>
+    <li>+381 65 123 4567</li>
+</ul>

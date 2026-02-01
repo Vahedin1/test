@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+	</resheader>
+
+	<data name="Home" xml:space="preserve"><value>Početna</value></data>
+	<data name="About" xml:space="preserve"><value>O nama</value></data>
+	<data name="Contact" xml:space="preserve"><value>Kontakt</value></data>
+	<data name="Ads" xml:space="preserve"><value>Oglasi</value></data>
+	<data name="AddCar" xml:space="preserve"><value>Dodaj automobil</value></data>
+	<data name="Admin" xml:space="preserve"><value>Admin</value></data>
+	<data name="Language" xml:space="preserve"><value>Jezik</value></data>
+	<data name="Privacy" xml:space="preserve"><value>Privatnost</value></data>
+
+	<data name="Login" xml:space="preserve"><value>Prijava</value></data>
+	<data name="Logout" xml:space="preserve"><value>Odjava</value></data>
+	<data name="Username" xml:space="preserve"><value>Korisničko ime</value></data>
+	<data name="Password" xml:space="preserve"><value>Lozinka</value></data>
+	<data name="LoggedInAs" xml:space="preserve"><value>Ulogovan si kao</value></data>
+	<data name="Error" xml:space="preserve"><value>Greška</value></data>
+
+	<data name="Brand" xml:space="preserve"><value>Marka</value></data>
+	<data name="Model" xml:space="preserve"><value>Model</value></data>
+	<data name="Year" xml:space="preserve"><value>Godište</value></data>
+	<data name="EngineCapacity" xml:space="preserve"><value>Zapremina motora</value></data>
+	<data name="Power" xml:space="preserve"><value>Snaga</value></data>
+	<data name="Fuel" xml:space="preserve"><value>Gorivo</value></data>
+	<data name="Body" xml:space="preserve"><value>Karoserija</value></data>
+	<data name="Description" xml:space="preserve"><value>Opis</value></data>
+	<data name="Price" xml:space="preserve"><value>Cena</value></data>
+	<data name="ContactInfo" xml:space="preserve"><value>Za više informacija pišite na: kontakt@autoprodaja.rs</value></data>
+	<data name="Add" xml:space="preserve"><value>Dodaj</value></data>
+
+	<data name="CarDetails" xml:space="preserve"><value>Detalji automobila</value></data>
+	<data name="Details" xml:space="preserve"><value>Detalji</value></data>
+	<data name="Delete" xml:space="preserve"><value>Obriši</value></data>
+	<data name="Action" xml:space="preserve"><value>Akcija</value></data>
+
+	<data name="NoCarsAvailable" xml:space="preserve"><value>Nema dostupnih automobila</value></data>
+	<data name="About" xml:space="preserve"><value>O nama</value></data>
+	<data name="AboutIntro" xml:space="preserve"><value>Auto Oglasi Hamidović je moderna platforma za prodaju automobila širom Srbije i regiona.</value></data>
+	<data name="Mission" xml:space="preserve"><value>Naša misija</value></data>
+	<data name="MissionText" xml:space="preserve"><value>Povezivanje kupaca i prodavaca na brz, jednostavan i siguran način.</value></data>
+
+
+	<data name="Address" xml:space="preserve"><value>Adresa</value></data>
+	<data name="Phones" xml:space="preserve"><value>Telefoni</value></data>
+
+	<data name="Welcome" xml:space="preserve"><value>Dobrodošli na sajt za prodaju automobila</value></data>
+	<data name="WelcomeText" xml:space="preserve"><value>Na našem sajtu možete pregledati oglase i dodati svoj automobil.</value></data>
+	<data name="AdsOverview" xml:space="preserve"><value>Pregled oglasa</value></data>
+	<data name="AvailableAds" xml:space="preserve"><value>Trenutno dostupni oglasi:</value></data>
+	<data name="ViewAllAds" xml:space="preserve"><value>Pregledaj sve oglase</value></data>
+
+	<data name="PrivacyText" xml:space="preserve"><value>Ova stranica prikazuje politiku privatnosti sajta.</value></data>
+</root>

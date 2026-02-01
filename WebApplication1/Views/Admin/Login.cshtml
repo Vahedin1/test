@@ -1,0 +1,35 @@
+﻿@model WebApplication1.Models.LoginViewModel
+@using Microsoft.AspNetCore.Http
+@inject Microsoft.Extensions.Localization.IStringLocalizer<WebApplication1.SharedResource> Localizer
+
+@if (Context.Session.GetString("IsAdmin") == "true")
+{
+    <p>@Localizer["LoggedInAs"] <strong>Admin</strong>.</p>
+    <form asp-controller="Admin" asp-action="Logout" method="post">
+        <button type="submit" class="btn btn-danger">@Localizer["Logout"]</button>
+    </form>
+}
+else
+{
+    <h4>@Localizer["Login"]</h4>
+    @using (Html.BeginForm("Login", "Admin", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label>@Localizer["Username"]</label>
+            @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <label>@Localizer["Password"]</label>
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        </div>
+
+        <br />
+        <input type="submit" value="@Localizer["Login"]" class="btn btn-primary" />
+    }
+
+    @if (ViewBag.Error != null)
+    {
+        <p style="color:red">@ViewBag["Error"]</p>
+    }
+}

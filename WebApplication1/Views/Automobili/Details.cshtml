@@ -1,0 +1,15 @@
+﻿@model WebApplication1.Models.Automobil
+@inject Microsoft.Extensions.Localization.IStringLocalizer<WebApplication1.SharedResource> Localizer
+
+
+<h2>@Localizer["CarDetails"]</h2>
+<p><b>@Localizer["Brand"]:</b> @Model.Marka</p>
+<p><b>@Localizer["Model"]:</b> @Model.Model</p>
+<p><b>@Localizer["Year"]:</b> @Model.Godiste</p>
+<p><b>@Localizer["EngineCapacity"]:</b> @Model.ZapreminaMotora L</p>
+<p><b>@Localizer["Power"]:</b> @Model.Snaga KS</p>
+<p><b>@Localizer["Fuel"]:</b> @Model.Gorivo</p>
+<p><b>@Localizer["Body"]:</b> @Model.Karoserija</p>
+<p><b>@Localizer["Description"]:</b> @Model.Opis</p>
+<p><b>@Localizer["Price"]:</b> @Model.Cena €</p>
+<p><b>@Localizer["Contact"]:</b> @Model.Kontakt</p>

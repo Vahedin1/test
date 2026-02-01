@@ -1,0 +1,61 @@
+﻿@model WebApplication1.Models.Automobil
+@inject Microsoft.Extensions.Localization.IStringLocalizer<WebApplication1.SharedResource> Localizer
+
+
+<h2>@Localizer["AddCar"]</h2>
+
+@using (Html.BeginForm("Create", "Automobili", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>@Localizer["Brand"]</label>
+        @Html.TextBoxFor(m => m.Marka, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>@Localizer["Model"]</label>
+        @Html.TextBoxFor(m => m.Model, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>@Localizer["Year"]</label>
+        @Html.TextBoxFor(m => m.Godiste, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>@Localizer["EngineCapacity"]</label>
+        @Html.TextBoxFor(m => m.ZapreminaMotora, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>@Localizer["Power"]</label>
+        @Html.TextBoxFor(m => m.Snaga, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>@Localizer["Fuel"]</label>
+        @Html.TextBoxFor(m => m.Gorivo, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>@Localizer["Body"]</label>
+        @Html.TextBoxFor(m => m.Karoserija, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>@Localizer["Description"]</label>
+        @Html.TextAreaFor(m => m.Opis, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>@Localizer["Price"]</label>
+        @Html.TextBoxFor(m => m.Cena, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>@Localizer["Contact"]</label>
+        @Html.TextBoxFor(m => m.Kontakt, new { @class = "form-control" })
+    </div>
+
+    <br />
+    <input type="submit" value="@Localizer["Add"]" class="btn btn-primary" />
+}

@@ -1,16 +1,23 @@
 using Microsoft.AspNetCore.Localization;
-using Microsoft.Extensions.Options;
 using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 builder.Services.AddControllersWithViews()
     .AddViewLocalization()
     .AddDataAnnotationsLocalization();
 
+builder.Services.AddAuthentication("Cookies")
+    .AddCookie("Cookies", options =>
+    {
+        options.LoginPath = "/Admin/Login";
+        options.AccessDeniedPath = "/Admin/AccessDenied";
+    });
 
+builder.Services.AddAuthorization();
+
+builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -18,45 +25,36 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
-
-builder.Services.Configure<RequestLocalizationOptions>(options =>
-{
-    var supportedCultures = new[]
-    {
-        new CultureInfo("sr"),
-        new CultureInfo("en"),
-        new CultureInfo("de")
-    };
-
-    options.DefaultRequestCulture = new RequestCulture("en");
-    options.SupportedCultures = supportedCultures;
-    options.SupportedUICultures = supportedCultures;
-});
-
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+var supportedCultures = new[]
 {
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
-}
+    new CultureInfo("en"),
+    new CultureInfo("sr"),
+    new CultureInfo("de")
+};
 
-app.UseHttpsRedirection();
+var localizationOptions = new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture("en"),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+};
+localizationOptions.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider());
+localizationOptions.RequestCultureProviders.Insert(1, new CookieRequestCultureProvider());
+
+app.UseRequestLocalization(localizationOptions);
+
 app.UseStaticFiles();
-
 app.UseRouting();
 
-app.UseAuthorization();
-
 app.UseSession();
-
-var locOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
-app.UseRequestLocalization(locOptions.Value);
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+);
 
 app.Run();

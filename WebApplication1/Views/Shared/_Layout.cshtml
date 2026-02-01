@@ -45,15 +45,9 @@
                     @Localizer["Language"]
                 </button>
                 <ul class="dropdown-menu">
-                    <li>
-                        <a class="dropdown-item" asp-controller="Home" asp-action="SetLanguage" asp-route-culture="sr" asp-route-returnUrl="@Context.Request.Path">Srpski</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" asp-controller="Home" asp-action="SetLanguage" asp-route-culture="en" asp-route-returnUrl="@Context.Request.Path">English</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" asp-controller="Home" asp-action="SetLanguage" asp-route-culture="de" asp-route-returnUrl="@Context.Request.Path">Deutsch</a>
-                    </li>
+                    <li><a class="dropdown-item" asp-controller="Home" asp-action="SetLanguage" asp-route-culture="sr" asp-route-returnUrl="@Context.Request.Path">Srpski</a></li>
+                    <li><a class="dropdown-item" asp-controller="Home" asp-action="SetLanguage" asp-route-culture="en" asp-route-returnUrl="@Context.Request.Path">English</a></li>
+                    <li><a class="dropdown-item" asp-controller="Home" asp-action="SetLanguage" asp-route-culture="de" asp-route-returnUrl="@Context.Request.Path">Deutsch</a></li>
                 </ul>
             </div>
         </nav>

@@ -1,4 +1,4 @@
-﻿# Ignore Visual Studio cache
+﻿gi# Ignore Visual Studio cache
 .vs/
 *.vsidx
 *.suo

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using Microsoft.AspNetCore.Http;
 using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
@@ -21,14 +21,22 @@ namespace WebApplication1.Controllers
 
         public IActionResult SetLanguage(string culture, string returnUrl)
         {
+            var supportedCultures = new[] { "en", "sr", "de" };
+            if (!supportedCultures.Contains(culture))
+            {
+                culture = "en";
+            }
+
             Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,
                 CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
                 new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
             );
 
+            returnUrl = string.IsNullOrEmpty(returnUrl) ? Url.Action("Index", "Home")! : returnUrl;
             return LocalRedirect(returnUrl);
         }
+
         public IActionResult Privacy()
         {
             return View();
